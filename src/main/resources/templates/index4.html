@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>拼接</title>
+</head>
+<body>
+
+<span th:text="username"></span>
+<input type="text" name="names" th:value="${username}"> <hr/>
+字符数量： <em th:size="${username}"></em>
+<hr/>
+狐狸颜色：<span th:text="color"></span>
+
+<hr/>
+拼接1：
+<span th:text="${username}+'颜色是'+${color}"></span> <hr/>
+拼接2：
+<span th:text="|${username}颜色是${color}|"></span> <hr/>
+
+
+</body>
+</html>

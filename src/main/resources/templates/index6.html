@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>代码片段</title>
+</head>
+<body>
+第一insert
+<!--将所有数据插入-->
+    <div th:insert="~{footer::copy}">
+    </div>
+<hr>
+第二：replace
+<!--替换当前标签-->
+<div th:replace="~{footer::copy}">
+</div>
+<hr>
+第三：include
+<!--只要内容-->
+<div th:include="~{footer::copy}">
+</div>
+<hr>
+
+
+</body>
+</html>

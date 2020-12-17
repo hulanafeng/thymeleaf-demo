@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>格式化</title>
+</head>
+<body>
+
+<!--时间-->
+时间：<span th:text="${#dates.format(date,'yyyy-MM-dd  HH:mm:ss')}"></span>
+
+<hr/>
+
+<!--字符串-->
+字符：<span th:text="${#strings.abbreviate(str,9)}"></span><br>
+截取字符串>>：<span th:text="${#strings.substring(str,2,8)}"></span><br>
+判断字符串为空> >：<span th:if="${#strings.isEmpty(str2)}">显示内容</span><br>
+判断字符串非空> >：<span th:if="${!#strings.isEmpty(str2)}">显示内容</span><br>
+
+<hr/>
+
+<!--数字-->
+金额： <span th:text="'￥'+${#numbers.formatDecimal(num,1,2)}"></span>
+
+<hr/>
+
+
+
+</body>
+</html>

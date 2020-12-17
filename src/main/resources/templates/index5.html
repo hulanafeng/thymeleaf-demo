@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>if判断语句// switch语句</title>
+</head>
+<body>
+
+    判断显示1：<h1 th:if="${result  == 'yes'}">要显示结果为“YES”</h1> <hr/>
+    判断显示2：<h1 th:unless="${result  == 'yes'}">没哟木有结果</h1> <hr/>
+
+    <hr/>
+
+    <div th:switch="${menu}">
+        switch语句：
+        <h1 th:case="1">猪蹄</h1>
+        <h1 th:case="2">猪儿</h1>
+        <h1 th:case="3">腰花</h1>
+    </div>
+
+    <hr/>
+
+
+
+</body>
+</html>

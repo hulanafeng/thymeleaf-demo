@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片展示</title>
+</head>
+<body>
+    this is index
+    <hr/>
+    <h1 th:text="${msg}"></h1>
+    <hr>
+
+<table>
+    <tr>
+        <td th:text="${user.name}">  </td>
+        <td th:text="${user.age}">  </td>
+        <td th:text="${user.sex}">  </td>
+        <td th:text="${user.hight}">  </td>
+    </tr>
+</table>
+
+<hr>
+
+        <img th:src="${map.src2}">
+        <img th:src="${map.src3}">
+
+</body>
+</html>
